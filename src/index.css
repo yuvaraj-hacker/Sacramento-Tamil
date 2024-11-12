@@ -1,0 +1,91 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Anton&family=Concert+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Spirax&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Anton&family=Archivo+Black&family=Concert+One&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+
+
+body{
+    font-family: "Poppins", sans-serif;
+}
+
+.playfair-display {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-style: italic;
+  }
+
+
+
+
+
+  .spirax-regular {
+    font-family: "Spirax", system-ui;
+    font-weight: 900;
+    font-style: normal;
+  }
+  
+
+
+
+  .concert-one-regular {
+    font-family: "Concert One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+
+  .archivo-black-regular {
+    font-family: "Archivo Black", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .text-stroke-white {
+    
+    -webkit-text-stroke: 2px #FFD900;  
+}
+
+.text-outline-yellow {
+  text-shadow: 1px 1px 0 #FFD700, -1px -1px 0 #FFD700, 1px -1px 0 #FFD700, -1px 1px 0 #FFD700;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Override the default Hamburger styles */
+.custom-hamburger .hamburger-react__bar {
+  background-color: #333;
+  height: 4px;
+  border-radius: 4px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* When the hamburger is open, change the animation */
+.custom-hamburger.open .hamburger-react__bar:nth-child(1) {
+  transform: rotate(45deg) translateY(8px);
+}
+
+.custom-hamburger.open .hamburger-react__bar:nth-child(2) {
+  opacity: 0;
+}
+
+.custom-hamburger.open .hamburger-react__bar:nth-child(3) {
+  transform: rotate(-45deg) translateY(-8px);
+}
