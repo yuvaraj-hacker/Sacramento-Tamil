@@ -12,10 +12,13 @@ function Header() {
     setIsVisible(!isVisible);
   };
 
+
+  const [isHovered, setIsHovered] = useState(false);
+
   return (
     <>
       <div className="bg-[url('/assets/images/Header/ddd.png')] bg-center bg-white bg-contain shadow-md  fixed w-full top-0  z-20">
-        <header className="max-w-[94rem] mx-auto px-5">
+        <header className="max-w-[100rem] mx-auto px-5">
           <div className="flex items-center  justify-between ">
             <Link to='/'>
               <div className='flex gap-5 items-center lg:my-0 my-3'>
@@ -41,37 +44,51 @@ function Header() {
               >
                 Home
               </Link>
+
               <Link
-                to="/about"
-                className={`p-3 ps-px sm:px-3 md:py-2   2xl:text-lg  text-[#5E0000]    hover:text-white  text-sm hover:bg-[#0470BC] focus:outline-none  ${isActive("/about") ? "text-white bg-[#0470BC]" : "text-[#E91E31]"
-                  }`}
+                onMouseEnter={() => setIsHovered(true)}
+                onMouseLeave={() => setIsHovered(false)}
+                className={`p-3 ps-px sm:px-3 md:py-2 2xl:text-lg group text-[#5E0000] text-sm relative hover:text-white hover:bg-[#0470BC] focus:outline-none ${isActive("/about") ? "text-white bg-[#0470BC]" : "text-[#E91E31]"}`}
               >
                 About Us
+                <i class={`fi fi-rr-angle-small-down text-red-500 group-hover:text-white relative top-1  ${isActive("/about") ? "text-white bg-[#0470BC]" : "text-[#E91E31]"}`}></i>
+
+                {isHovered && (
+                  <div className="absolute  left-0   mt-2 bg-white border rounded shadow-lg w-60">
+                    <Link to="/about" className="block px-4 py-2 text-[#E91E31] hover:bg-[#0470BC] hover:text-white">
+                      Board Members
+                    </Link>
+                    <Link to="/goal" className="block px-4 py-2 text-[#E91E31] hover:bg-[#0470BC] hover:text-white">
+                      Goals
+                    </Link>
+                    <Link to="/financial" className="block px-4 py-2 text-[#E91E31] hover:bg-[#0470BC] hover:text-white">
+                      Financial Summary
+                    </Link>
+                    <Link to="/youth" className="block px-4 py-2 text-[#E91E31] hover:bg-[#0470BC] hover:text-white">
+                      Youth Forum
+                    </Link>
+                  </div>
+                )}
               </Link>
               <Link
-                to='/course'
-                className={`p-3 ps-px sm:px-3 md:py-2  2xl:text-lg  text-[#5E0000] text-sm  hover:text-white   hover:bg-[#0470BC] focus:outline-none ${isActive("/course") ? "text-white" : " E91E31"}`}
+                to='/gallery'
+                className={`p-3 ps-px sm:px-3 md:py-2  2xl:text-lg  text-[#5E0000] text-sm  hover:text-white   hover:bg-[#0470BC] focus:outline-none ${isActive("/gallery") ? "text-white bg-[#0470BC]" : "text-[#E91E31]"}`}
               >
                 Gallery
               </Link>
               <Link
-                className={`p-3 ps-px sm:px-3 md:py-2   2xl:text-lg  text-[#5E0000] text-sm  hover:text-white   hover:bg-[#0470BC]   focus:outline-none ${isActive("/admission") ? "text-white" : "E91E31"}`}
-                to='/admission'
+                className={`p-3 ps-px sm:px-3 md:py-2   2xl:text-lg  text-[#5E0000] text-sm  hover:text-white   hover:bg-[#0470BC]   focus:outline-none ${isActive("/events") ? "text-white bg-[#0470BC]" : "text-[#E91E31]"}`}
+                to='/events'
               >
                 Events
               </Link>
               <Link
-                className={`p-3 ps-px sm:px-3 md:py-2  2xl:text-lg   text-[#5E0000] text-sm  hover:text-white   hover:bg-[#0470BC]  focus:outline-none ${isActive("/university-details") ? "text-white" : "E91E31"} `}
-                to='/university-details'
+                className={`p-3 ps-px sm:px-3 md:py-2  2xl:text-lg   text-[#5E0000] text-sm  hover:text-white   hover:bg-[#0470BC]  focus:outline-none ${isActive("/tamilschools") ? "text-white bg-[#0470BC]" : "text-[#E91E31]"} `}
+                to='/tamilschools'
               >
                 Tamil Schools
               </Link>
-              <Link
-                className={`p-3 ps-px sm:px-3 md:py-2  2xl:text-lg text-[#5E0000]  text-sm hover:text-white   hover:bg-[#0470BC] focus:outline-none  ${isActive("/contact") ? "text-white" : "E91E31"} `}
-                to='/contact'
-              >
-                Contact Us
-              </Link>
+
             </div>
 
             <div className='bg-[#0470BC] px-5 py-7 lg:block hidden text-white font-bold cursor-pointer'>

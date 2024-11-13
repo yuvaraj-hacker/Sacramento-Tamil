@@ -5,6 +5,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Spirax&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Anton&family=Archivo+Black&family=Concert+One&display=swap');
 
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -56,36 +57,18 @@ body{
 }
 
 .text-outline-yellow {
-  text-shadow: 1px 1px 0 #FFD700, -1px -1px 0 #FFD700, 1px -1px 0 #FFD700, -1px 1px 0 #FFD700;
+  text-shadow: 2px 2px 0 #FFD700, -2px -2px 0 #FFD700, 2px -2px 0 #FFD700, -2px 2px 0 #FFD700;
+}
+
+
+
+.text-outline-white {
+  text-shadow: 3px 3px 0 #fff, -3px -3px 0 #fff, 3px -3px 0 #fff, -3px 3px 0 #fff;
 }
 
 
 
 
 
+ 
 
-
-
-
-
-
-/* Override the default Hamburger styles */
-.custom-hamburger .hamburger-react__bar {
-  background-color: #333;
-  height: 4px;
-  border-radius: 4px;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-/* When the hamburger is open, change the animation */
-.custom-hamburger.open .hamburger-react__bar:nth-child(1) {
-  transform: rotate(45deg) translateY(8px);
-}
-
-.custom-hamburger.open .hamburger-react__bar:nth-child(2) {
-  opacity: 0;
-}
-
-.custom-hamburger.open .hamburger-react__bar:nth-child(3) {
-  transform: rotate(-45deg) translateY(-8px);
-}

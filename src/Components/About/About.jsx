@@ -1,11 +1,11 @@
 import React from 'react'
-import AboutUs from '../../Shared/Components/About/AboutUs'
+import Aboutt from '../../Shared/Components/About/Aboutt'
 
 function About() {
   return (
     <>
 
-      <AboutUs />
+      <Aboutt />
     </ >
   )
 }
