@@ -16,7 +16,6 @@ function Feedback(props) {
                             <div className=' '>
                                 <label htmlFor="" className='text-lg'>Name *</label>
                                 <input className='w-full rounded-md p-2' type=" text" />
-
                             </div>
                             <div>
                                 <label htmlFor="" className='text-lg'>Email *</label>

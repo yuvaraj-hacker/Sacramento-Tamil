@@ -17,7 +17,7 @@ function Header() {
 
   return (
     <>
-      <div className="bg-[url('/assets/images/Header/ddd.png')] bg-center bg-white bg-contain shadow-md  fixed w-full top-0  z-20">
+      <div className="bg-[url('/assets/images/Header/ddd.png')] bg-center bg-white bg-contain z-50 shadow-md  fixed w-full top-0  z-20">
         <header className="max-w-[100rem] mx-auto px-5">
           <div className="flex items-center  justify-between ">
             <Link to='/'>
@@ -88,9 +88,7 @@ function Header() {
               >
                 Tamil Schools
               </Link>
-
             </div>
-
             <div className='bg-[#0470BC] px-5 py-7 lg:block hidden text-white font-bold cursor-pointer'>
               Donate
             </div>
@@ -116,33 +114,27 @@ function Header() {
               About Us
             </Link>
             <Link
-              to="/course"
+              to="/gallery"
               className={`block py-2 text-lg  focus:outline-none  hover:underline ${isActive("/course") ? "text-white" : "text-[#f4e316]"} `}
               onClick={() => setOpen(false)}
             >
               Gallery
             </Link>
             <Link
-              to="/admission"
+              to="/events"
               className={`block py-2 text-lg  focus:outline-none  hover:underline ${isActive("/admission") ? "text-white" : "text-[#f4e316]"} `}
               onClick={() => setOpen(false)}
             >
               Events
             </Link>
             <Link
-              to="/university-details"
+              to="/tamilschools"
               className={`block py-2 text-lg  focus:outline-none  hover:underline ${isActive("/university-details") ? "text-white" : "text-[#f4e316]"} `}
               onClick={() => setOpen(false)}
             >
               Tamil Schools
             </Link>
-            <Link
-              to="/contact"
-              className={`block py-2 text-lg  focus:outline-none  hover:underline ${isActive("/contact") ? "text-white" : "text-[#f4e316]"} `}
-              onClick={() => setOpen(false)}
-            >
-              Contact Us
-            </Link>
+
 
           </div>
         )}
