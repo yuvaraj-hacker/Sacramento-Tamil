@@ -9,12 +9,7 @@ import YouthPage from "../Components/YouthForumPage.jsx/YouthPage";
 import GalleryPage from "../Components/GalleryPage/GalleryPage";
 import EventsPage from "../Components/EventsPage/EventsPage";
 import TamilSchoolPage from "../Components/TamilSchoolPage/TamilSchoolPage";
-
-
-
-
 function Approuter() {
-
     return (
         <BrowserRouter>
             <ScrollToTop />
@@ -28,12 +23,9 @@ function Approuter() {
                     <Route path="/gallery" element={<GalleryPage />} />
                     <Route path="/events" element={<EventsPage />} />
                     <Route path="/tamilschools" element={<TamilSchoolPage />} />
-
                 </Route>
-
             </Routes>
         </BrowserRouter>
     );
 }
-
 export default Approuter;

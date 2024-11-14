@@ -12,8 +12,4 @@ export const Youthforum = [
     {    imgSrc:'/assets/images/YouthForum/image (12).png',  name:'Anika Maragathavel '  },
     {    imgSrc:'/assets/images/YouthForum/image (13).png',  name:'Anika Maragathavel '  },
     {    imgSrc:'/assets/images/YouthForum/image (14).png',  name:'Anika Maragathavel '  },
-    
-   
-   
 ]
-

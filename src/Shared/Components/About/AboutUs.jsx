@@ -1,5 +1,4 @@
 import React from 'react'
-
 function AboutUs({ title }) {
     return (
         <>
@@ -13,5 +12,4 @@ function AboutUs({ title }) {
         </>
     )
 }
-
 export default AboutUs

@@ -1,12 +1,10 @@
-import React, { useRef } from 'react'
+import React   from 'react'
 import { Events } from '../../../../public/assets/Json/NewEvent'
-
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
-
 function Event(props) {
     const { mobileNextRef, mobilePrevRef } = props;
     return (
@@ -27,15 +25,12 @@ function Event(props) {
                                 breakpoints={{
                                     0: {
                                         slidesPerView: 1,
-
                                     },
                                     768: {
                                         slidesPerView: 2,
-
                                     },
                                     1024: {
                                         slidesPerView: 4,
-
                                     },
                                 }}
                                 navigation={{ nextEl: '.swiper-button-nextdeals', prevEl: '.swiper-button-prevdeals' }}
@@ -48,7 +43,6 @@ function Event(props) {
                                             <div className="flex items-center space-x-4">
                                                 <img src={sponsor.imgSrc} className="bg-no-repeat" />
                                             </div>
-
                                         </div>
                                     </SwiperSlide>
                                 ))}
@@ -68,10 +62,8 @@ function Event(props) {
                 </div>
             </section>
             <div id='Donate'>
-
             </div>
         </>
     )
 }
-
 export default Event

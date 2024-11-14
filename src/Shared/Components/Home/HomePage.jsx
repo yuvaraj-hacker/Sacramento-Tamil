@@ -1,6 +1,5 @@
 import React from 'react'
 import { Sponsor } from '../../../../public/assets/Json/Swiper'
-import { useRef } from 'react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -8,9 +7,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import { EventProgram } from '../../../../public/assets/Json/Event'
 import CountdownTimer from './CountdownTimer';
-
 function HomePage(props) {
-
     const { prevRef, nextRef, mobileNextRef } = props;
     return (
         <>
@@ -101,5 +98,4 @@ function HomePage(props) {
         </>
     )
 }
-
 export default HomePage

@@ -1,9 +1,6 @@
 import React from 'react'
-
 function Feedback(props) {
-
     const { statuses, setActiveStatus, activeStatus } = props;
-
     return (
         <>
             <section className="bg-[url('/assets/images/Feedback/Feedback.png')] bg-center  mt-10     bg-contain">
@@ -28,19 +25,16 @@ function Feedback(props) {
                             </div>
                         </div>
                         <div className='grid items-center md:grid-cols-8 md:gap-10  '>
-
                             <div className='flex flex-col  col-span-7'>
                                 <label htmlFor=" " className='text-lg'>Feedback</label>
                                 <input type="text" name="" id="" className='p-2 rounded-md' />
                             </div>
-
                             <button className='bg-[#E91E31] hover:text-[#E91E31] py-2 px-3  mt-7  hover:bg-white duration-200 text-white  rounded-md'>
                                 SEND
                             </button>
                         </div>
                     </div>
                 </div>
-
             </section >
             <section className='px-5   lg:h-52  md:h-auto sm:h-auto h-[400px] '>
                 <div className=' relative bottom-36  max-w-[58rem]  bg-white border rounded-xl mx-auto '>
@@ -84,5 +78,4 @@ function Feedback(props) {
         </>
     )
 }
-
 export default Feedback

@@ -4,7 +4,6 @@ import AboutSection from '../../Shared/Components/Home/AboutSection'
 import Feedback from '../../Shared/Components/Home/Feedback'
 import Gallery from '../../Shared/Components/Home/Gallery'
 import Event from '../../Shared/Components/Home/Event'
-
 function Home() {
   const prevRef = useRef(null);
   const nextRef = useRef(null);
@@ -17,12 +16,11 @@ function Home() {
   return (
     <>
       <HomePage prevRef={prevRef} nextRef={nextRef} />
-      <AboutSection />
+        <AboutSection />
       <Gallery mobilePreviousRef={mobilePreviousRef} mobileNextstepRef={mobileNextstepRef} />
       <Event mobilePrevRef={mobilePrevRef} mobileNextRef={mobileNextRef} />
       <Feedback activeStatus={activeStatus} setActiveStatus={setActiveStatus} statuses={statuses} />
     </>
   )
 }
-
 export default Home

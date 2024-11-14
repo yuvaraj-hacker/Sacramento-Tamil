@@ -7,7 +7,6 @@ export default {
   ],
   theme: {
     extend: {
-   
       backgroundImage: {
         'home-page': "url('/Images/final-image.jpeg')",
         'about-page': "url('/Images/about.png')",
@@ -16,10 +15,5 @@ export default {
     },
   },
   plugins: [    require('preline/plugin' , 'tailwindcss-animated'),
-  
   ],
 }
-
-
-
-

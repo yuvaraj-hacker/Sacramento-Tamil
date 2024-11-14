@@ -1,17 +1,9 @@
 import React, { useState } from 'react';
-import AboutUs from '../About/AboutUs';
-import SponsorSwiper from '../SponsorSwiper/SponsorSwiper';
 import { FaChevronUp, FaChevronDown } from 'react-icons/fa';
-
 function FinancialSummary(props) {
-
     const { toggleAccordion, accordionItems, openAccordions } = props;
-
     return (
         <>
-            <section>
-                <AboutUs title="FINANCIAL SUMMARY" />
-            </section>
             <section className="max-w-[50rem] mx-auto px-5 my-10">
                 {accordionItems.map((item) => (
                     <div key={item.id} className=" ">
@@ -41,11 +33,7 @@ function FinancialSummary(props) {
                     </div>
                 ))}
             </section>
-            <section>
-                <SponsorSwiper />
-            </section>
         </>
     );
 }
-
 export default FinancialSummary;

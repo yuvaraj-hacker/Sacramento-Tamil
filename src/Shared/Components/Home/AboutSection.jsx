@@ -1,7 +1,6 @@
 import React from 'react'
 import { Member } from '../../../../public/assets/Json/BoardMember'
 import { Link } from 'react-router-dom'
-
 function AboutSection() {
     return (
         <>
@@ -21,14 +20,11 @@ function AboutSection() {
                         </div>
                         <div className='bg-[#E91E31] text-center p-2 md:px-14 text-white font-semibold rounded-tl-3xl rounded-bl-3xl '>
                             <p className=""> Promoting Tamil </p>
-
                             <p className="">
                                 language and culture</p>
                         </div>
                         <div className='bg-[#E91E31] text-center p-2 md:px-14 text-white font-semibold rounded-tr-3xl rounded-br-3xl '>
                             <p className="">  Promoting</p>
-
-
                             <p className="">Tamil music and arts</p>
                         </div>
                         <div className='bg-[#E91E31] text-center p-2 md:px-14 text-white font-semibold rounded-tl-3xl rounded-bl-3xl '>
@@ -38,7 +34,6 @@ function AboutSection() {
                         </div>
                         <div className='bg-[#E91E31] text-center p-2 md:px-14 text-white font-semibold rounded-tr-3xl rounded-br-3xl '>
                             <p className=""> Ensuring</p>
-
                             <p className="">religious neutrality</p>
                         </div>
                         <div className='bg-[#E91E31] text-center p-2 md:px-14 text-white font-semibold rounded-tl-3xl rounded-bl-3xl '>
@@ -49,7 +44,6 @@ function AboutSection() {
                             <p className="">  Offering</p>
                             <p className="">Moral Support</p>
                         </div>
-
                     </div>
                 </div>
                 <div className=' max-w-[60rem]   mx-auto px-5  '>
@@ -76,9 +70,7 @@ function AboutSection() {
                     </div>
                 </div>
             </section>
-
         </>
     )
 }
-
 export default AboutSection

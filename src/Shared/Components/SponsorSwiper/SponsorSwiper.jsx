@@ -6,20 +6,16 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
-
-
 function SponsorSwiper() {
     const mobilePreviousRef = useRef(null);
     const mobileNextStepRef = useRef(null);
-
     return (
         <>
             <div className='  max-w-[78rem] mx-auto my-20 space-y-5'>
                 <h2 className="text-2xl font-bold text-center text-red-600   archivo-black-regular">OUR SPONSORS</h2>
-                <section className="flex flex-col items-center relative  px-10">
+                 <section className="flex flex-col items-center relative  px-10">
                     <Swiper
                         slidesPerView={1}
-
                         loop={true}
                         autoplay={{
                             delay: 3000,
@@ -28,15 +24,12 @@ function SponsorSwiper() {
                         breakpoints={{
                             0: {
                                 slidesPerView: 1,
-
                             },
                             768: {
                                 slidesPerView: 2,
-
                             },
                             1024: {
                                 slidesPerView: 3,
-
                             },
                         }}
                         navigation={{ nextEl: '.swiper-button-nextdeal', prevEl: '.swiper-button-prevdeal' }}
@@ -54,7 +47,6 @@ function SponsorSwiper() {
                             </SwiperSlide>
                         ))}
                     </Swiper>
-
                     <div
                         ref={mobileNextStepRef}
                         className="absolute  right-0   top-[47%]   z-40 cursor-pointer"  >
@@ -70,5 +62,4 @@ function SponsorSwiper() {
         </>
     )
 }
-
 export default SponsorSwiper

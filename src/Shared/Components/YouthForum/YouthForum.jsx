@@ -1,14 +1,8 @@
 import React from 'react'
-import AboutUs from '../About/AboutUs'
-import SponsorSwiper from '../SponsorSwiper/SponsorSwiper'
 import { Youthforum } from '../../../../public/assets/Json/YouthForum'
-
 function YouthForum() {
     return (
         <>
-            <section>
-                <AboutUs title="YOUTH FORUM" />
-            </section>
             <section className='max-w-[80rem] mx-auto px-5 my-10'>
                 <div>
                     <div className='flex  flex-wrap gap-10' >
@@ -27,11 +21,7 @@ function YouthForum() {
                     </div>
                 </div>
             </section>
-            <section>
-                <SponsorSwiper />
-            </section>
         </>
     )
 }
-
 export default YouthForum

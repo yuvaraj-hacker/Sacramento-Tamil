@@ -1,16 +1,12 @@
-import React, { useRef } from 'react'
+import React from 'react'
 import { GallerySec } from '../../../../public/assets/Json/Gallery'
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
-
-
 function Gallery(props) {
   const { mobileNextStepRef, mobilePreviousRef } = props;
-
-
   return (
     <>
       <section className=' max-w-[90rem] mx-auto   md:my-20  my-10'>
@@ -60,19 +56,15 @@ function Gallery(props) {
                 <img className=" swiper-button-nextdea px-2 w-14" src="/assets/images/Hero-Section/Top.png" alt="Previous" />
               </div>
               <div
-
                 ref={mobilePreviousRef}
                 className="absolute  left-0 top-1/2   rotate-90 cursor-pointer">
                 <img className=" swiper-button-prevdea px-2 w-14" src="/assets/images/Hero-Section/Bottom.png" alt="Next" />
               </div>
             </section>
-
           </div>
         </div>
       </section>
-     
     </>
   )
 }
-
 export default Gallery

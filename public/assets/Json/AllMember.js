@@ -1,5 +1,3 @@
-
-
 export const allMember = [
     {    imgSrc:'/assets/images/Allmember/image (15).png',  name:'Magesh Babu'  , role:'President'},
     {    imgSrc:'/assets/images/Allmember/image (16).png',  name:'Naveen Pandurangan'  , role:'Secretary'},
@@ -14,8 +12,4 @@ export const allMember = [
     {    imgSrc:'/assets/images/Allmember/image (10).png',  name:'Michael Sampath'  , role:'Director of Technology'},
     {    imgSrc:'/assets/images/Allmember/image (11).png',  name:'Arjun Joseph'  , role:'Trustee'},
     {    imgSrc:'/assets/images/Allmember/image (12).png',  name:'Murugesh Ganapathy'  ,  },
-   
-   
 ]
-
-

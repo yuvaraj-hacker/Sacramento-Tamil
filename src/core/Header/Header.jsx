@@ -1,16 +1,19 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import Hamburger from 'hamburger-react';
-
 function Header() {
   const [isOpen, setOpen] = useState(false);
   const location = useLocation();
   const isActive = (path) => location.pathname === path;
   const [isHovered, setIsHovered] = useState(false);
-
+  const [isAboutOpen, setIsAboutOpen] = useState(false);
+  const handleLinkClick = () => {
+    setOpen(false);
+    setIsAboutOpen(false);  
+  };
   return (
     <>
-      <div className="bg-[url('/assets/images/Header/ddd.png')] bg-center bg-white bg-contain z-50 shadow-md fixed w-full top-0 z-20">
+      <div className="bg-[url('/assets/images/Header/ddd.png')] bg-center bg-white bg-contain z-50 shadow-md fixed w-full top-0  ">
         <header className="max-w-[100rem] mx-auto px-5">
           <div className="flex items-center justify-between">
             <Link to="/">
@@ -24,11 +27,9 @@ function Header() {
                 </div>
               </div>
             </Link>
-
             <div className="block lg:hidden">
               <Hamburger toggled={isOpen} toggle={setOpen} />
             </div>
-
             <div className="text-[#f4e316] lg:block hidden space-x-2">
               <Link
                 to="/"
@@ -37,37 +38,32 @@ function Header() {
               >
                 Home
               </Link>
-
               <Link
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
-                className={`p-3 ps-px sm:px-3 md:py-2 2xl:text-lg group text-[#5E0000] text-sm relative hover:text-white hover:bg-[#0470BC] ${isActive('/about') ? 'text-white bg-[#0470BC]' : 'text-[#E91E31]'
-                  }`}
-              >
+                className={`p-3 ps-px sm:px-3 md:py-2 2xl:text-lg group text-[#5E0000] text-sm relative hover:text-white hover:bg-[#0470BC] ${isActive('/about') || isActive('/goal') || isActive('/financial') || isActive('/youth') ? 'text-white bg-[#0470BC]' : 'text-[#E91E31]'}`}>
                 About Us
                 <i
-                  className={`fi fi-rr-angle-small-down text-red-500 group-hover:text-white relative top-1 ${isActive('/about') ? 'text-white bg-[#0470BC]' : 'text-[#E91E31]'
+                  className={`fi fi-rr-angle-small-down text-red-500 group-hover:text-white relative top-1 ${isActive('/about') || isActive('/goal') || isActive('/financial') || isActive('/youth') ? 'text-white bg-[#0470BC]' : 'text-[#E91E31]'
                     }`}
                 ></i>
-
                 {isHovered && (
-                  <div className="absolute left-0 mt-2 bg-white border rounded shadow-lg w-60">
-                    <Link to="/about" className="block px-4 py-2 text-[#E91E31] hover:bg-[#0470BC] hover:text-white">
+                  <div className="absolute left-0  mt-[6.5px] bg-white border rounded shadow-lg w-60">
+                    <Link to="/about" className={`block px-4 py-2 text-[#E91E31] hover:bg-[#0470BC] hover:text-white ${isActive('/about') ? 'text-white bg-[#0470BC]' : 'text-[#E91E31]'}`}>
                       Board Members
                     </Link>
-                    <Link to="/goal" className="block px-4 py-2 text-[#E91E31] hover:bg-[#0470BC] hover:text-white">
+                    <Link to="/goal" className={`block px-4 py-2 text-[#E91E31] hover:bg-[#0470BC] hover:text-white ${isActive('/goal') ? 'text-white bg-[#0470BC]' : 'text-[#E91E31]'}`}>
                       Goals
                     </Link>
-                    <Link to="/financial" className="block px-4 py-2 text-[#E91E31] hover:bg-[#0470BC] hover:text-white">
+                    <Link to="/financial" className={`block px-4 py-2 text-[#E91E31] hover:bg-[#0470BC] hover:text-white ${isActive('/financial') ? 'text-white bg-[#0470BC]' : 'text-[#E91E31]'}`}>
                       Financial Summary
                     </Link>
-                    <Link to="/youth" className="block px-4 py-2 text-[#E91E31] hover:bg-[#0470BC] hover:text-white">
+                    <Link to="/youth" className={`block px-4 py-2 text-[#E91E31] hover:bg-[#0470BC] hover:text-white ${isActive('/youth') ? 'text-white bg-[#0470BC]' : 'text-[#E91E31]'}`}>
                       Youth Forum
                     </Link>
                   </div>
                 )}
               </Link>
-
               <Link
                 to="/gallery"
                 className={`p-3 ps-px sm:px-3 md:py-2 2xl:text-lg text-sm hover:text-white hover:bg-[#0470BC] ${isActive('/gallery') ? 'text-white bg-[#0470BC]' : 'text-[#E91E31]'
@@ -75,7 +71,6 @@ function Header() {
               >
                 Gallery
               </Link>
-
               <Link
                 to="/events"
                 className={`p-3 ps-px sm:px-3 md:py-2 2xl:text-lg text-sm hover:text-white hover:bg-[#0470BC] ${isActive('/events') ? 'text-white bg-[#0470BC]' : 'text-[#E91E31]'
@@ -83,7 +78,6 @@ function Header() {
               >
                 Events
               </Link>
-
               <Link
                 to="/tamilschools"
                 className={`p-3 ps-px sm:px-3 md:py-2 2xl:text-lg text-sm hover:text-white hover:bg-[#0470BC] ${isActive('/tamilschools') ? 'text-white bg-[#0470BC]' : 'text-[#E91E31]'
@@ -96,8 +90,6 @@ function Header() {
           </div>
         </header>
       </div>
-
-
       <div
         className={`fixed top-0 right-0 h-full w-[60%] bg-[#0571BC]  text-[#f4e316] text-center p-5 transition-transform transform ${isOpen ? 'translate-x-0' : 'translate-x-full'
           } lg:hidden z-50`}
@@ -111,35 +103,52 @@ function Header() {
           <Link
             to="/"
             className={`block text-lg hover:underline ${isActive('/') ? 'text-white' : 'text-[#f4e316]'}`}
-            onClick={() => setOpen(false)}
+            onClick={handleLinkClick}
           >
             Home
           </Link>
-          <Link
-            to="/about"
-            className={`block text-lg hover:underline ${isActive('/about') ? 'text-white' : 'text-[#f4e316]'}`}
-            onClick={() => setOpen(false)}
-          >
-            About Us
-          </Link>
+          <div  >
+            <button onClick={() => setIsAboutOpen(!isAboutOpen)} className="block text-lg   w-full text-[#f4e316] ">
+              About Us
+              <i
+                className={`fi fi-rr-angle-small-down text-[#f4e316] group-hover:text-white relative top-1 ${isActive('/about') ? '  bg-[#0470BC]' : 'text-[#E91E31]'
+                  }`} ></i>
+            </button>
+            {isAboutOpen && (
+              <div className=" bg-[#59b2f1] mt-3 space-y-4 rounded-lg py-3">
+                <Link to="/about" className={`block text-[#f4e316] hover:underline ${isActive('/about') ? 'text-white' : 'text-[#f4e316]'}`} onClick={() => setOpen(false)}>
+                  Board Members
+                </Link>
+                <Link to="/goal" className={`block text-[#f4e316] hover:underline ${isActive('/goal') ? 'text-white' : 'text-[#f4e316]'}`} onClick={() => setOpen(false)}>
+                  Goals
+                </Link>
+                <Link to="/financial" className={`block text-[#f4e316] hover:underline ${isActive('/financial') ? 'text-white' : 'text-[#f4e316]'}`} onClick={() => setOpen(false)}>
+                  Financial Summary
+                </Link>
+                <Link to="/youth" className={`block text-[#f4e316] hover:underline ${isActive('/youth') ? 'text-white' : 'text-[#f4e316]'}`} onClick={() => setOpen(false)}>
+                  Youth Forum
+                </Link>
+              </div>
+            )}
+          </div>
           <Link
             to="/gallery"
             className={`block text-lg hover:underline ${isActive('/gallery') ? 'text-white' : 'text-[#f4e316]'}`}
-            onClick={() => setOpen(false)}
+            onClick={handleLinkClick}
           >
             Gallery
           </Link>
           <Link
             to="/events"
             className={`block text-lg hover:underline ${isActive('/events') ? 'text-white' : 'text-[#f4e316]'}`}
-            onClick={() => setOpen(false)}
+            onClick={handleLinkClick}
           >
             Events
           </Link>
           <Link
             to="/tamilschools"
             className={`block text-lg hover:underline ${isActive('/tamilschools') ? 'text-white' : 'text-[#f4e316]'}`}
-            onClick={() => setOpen(false)}
+            onClick={handleLinkClick}
           >
             Tamil Schools
           </Link>
@@ -149,5 +158,4 @@ function Header() {
     </>
   );
 }
-
 export default Header;

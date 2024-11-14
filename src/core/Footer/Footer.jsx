@@ -1,10 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
 function Footer() {
   return (
     <>
-
       <section className="bg-[url('/assets/images/Footer/Foot.png')]    bg-center flex items-center justify-center md:h-[50vh] w-full">
         <div className="max-w-[90rem] mx-auto px-5 md:my-0 my-10">
           <div className="grid md:grid-cols-3 gap-5 grid-cols-1 place-items-center">
@@ -53,7 +51,6 @@ function Footer() {
                 </div>
               </div>
             </div>
-
             <div className="text-white text-center md:text-left ">
               <div className='md:space-y-10 mb-7 '>
                 <div>
@@ -78,10 +75,9 @@ function Footer() {
         </div>
       </section>
       <section className='w-full text-center bg-[#E52E3D] text-white py-3 px-5'>
-        <p className=" md:text-base text-sm flex justify-center flex-wrap items-center">© Sacramento Tamil Mandrum 2024 <hr className='w-5 rotate-90 md:block hidden'/>  Developed by  <a href='http://arrowthought.com/' target='_blank' > <span className='text-[#FFE134] hover:underline '> Arrow Thought</span> </a> </p>
+        <p className=" md:text-base text-sm flex justify-center flex-wrap items-center">© Sacramento Tamil Mandrum 2024 <hr className='w-5 rotate-90 md:block hidden'/>  Developed by   <a href='http://arrowthought.com/' target='_blank' > <span className='text-[#FFE134] hover:underline '>  Arrow Thought</span> </a> </p>
       </section>
     </>
   );
 }
-
 export default Footer;

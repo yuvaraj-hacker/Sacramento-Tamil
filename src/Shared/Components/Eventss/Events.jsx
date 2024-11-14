@@ -1,15 +1,8 @@
 import React from 'react'
-import AboutUs from '../About/AboutUs'
-import SponsorSwiper from '../SponsorSwiper/SponsorSwiper'
-import Event from '../Home/Event'
 import CountdownTimer from '../Home/CountdownTimer'
-
 function Events() {
     return (
         <>
-            <section>
-                <AboutUs title="EVENTS" />
-            </section>
             <section className='max-w-[60rem] mx-auto my-10 px-5'>
                 <div className='  bg-[#0571BC] rounded-lg border-4 py-2 border-[#FFD900] flex items-center flex-wrap justify-around'>
                     <div className='flex gap-4 items-center'>
@@ -24,14 +17,7 @@ function Events() {
                     </div>
                 </div>
             </section>
-            <section>
-                <Event />
-            </section>
-            <section>
-                <SponsorSwiper />
-            </section>
         </>
     )
 }
-
 export default Events

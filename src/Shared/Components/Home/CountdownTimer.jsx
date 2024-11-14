@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-
 const CountdownTimer = ({ bgColor = '#E91E31', texColor = '#E91E31', textColor = '#fff' }) => {
     const targetDate = new Date('2024-11-31T23:59:59');
     const calculateTimeLeft = () => {
@@ -10,19 +9,16 @@ const CountdownTimer = ({ bgColor = '#E91E31', texColor = '#E91E31', textColor =
             const hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
             const minutes = Math.floor((difference / (1000 * 60)) % 60);
             const seconds = Math.floor((difference / 1000) % 60);
-
             return { days, hours, minutes, seconds };
         } else {
             return { days: 0, hours: 0, minutes: 0, seconds: 0 };
         }
     };
     const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
-
     useEffect(() => {
         const timer = setInterval(() => {
             setTimeLeft(calculateTimeLeft());
         }, 1000);
-
         return () => clearInterval(timer);
     }, []);
     return (
@@ -54,5 +50,4 @@ const CountdownTimer = ({ bgColor = '#E91E31', texColor = '#E91E31', textColor =
         </div>
     );
 };
-
 export default CountdownTimer;

@@ -1,13 +1,7 @@
 import React from 'react'
-import AboutUs from '../About/AboutUs'
-import SponsorSwiper from '../SponsorSwiper/SponsorSwiper'
-
 function Gallerys() {
     return (
         <>
-            <section>
-                <AboutUs title="GALLERY" />
-            </section>
             <section className='max-w-[70rem] mx-auto px-5 my-10'>
                 <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1'>
                     <div className="relative group    overflow-hidden rounded-lg shadow-lg">
@@ -20,11 +14,7 @@ function Gallerys() {
                     </div>
                 </div>
             </section>
-            <section>
-                <SponsorSwiper />
-            </section>
         </>
     )
 }
-
 export default Gallerys
