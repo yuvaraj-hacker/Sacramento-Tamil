@@ -75,7 +75,7 @@ function Footer() {
         </div>
       </section>
       <section className='w-full text-center bg-[#E52E3D] text-white py-3 px-5'>
-        <p className=" md:text-base text-sm flex justify-center flex-wrap items-center">© Sacramento Tamil Mandrum 2024 <hr className='w-5 rotate-90 md:block hidden'/>  Developed by   <a href='http://arrowthought.com/' target='_blank' > <span className='text-[#FFE134] hover:underline '>  Arrow Thought</span> </a> </p>
+        <p className=" md:text-base text-sm flex justify-center flex-wrap items-center">© Sacramento Tamil Mandrum 2024 <hr className='w-5 rotate-90 md:block hidden' />  Developed by   <a href='http://arrowthought.com/' target='_blank' > <span className='text-[#FFE134] hover:underline ml-1'>  Arrow Thought</span> </a> </p>
       </section>
     </>
   );
