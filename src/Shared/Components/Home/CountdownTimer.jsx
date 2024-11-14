@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-const CountdownTimer = () => {
+const CountdownTimer = ({ bgColor = '#E91E31', texColor = '#E91E31', textColor = '#fff' }) => {
     const targetDate = new Date('2024-11-31T23:59:59');
     const calculateTimeLeft = () => {
         const now = new Date();
@@ -17,39 +17,39 @@ const CountdownTimer = () => {
         }
     };
     const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
- 
+
     useEffect(() => {
         const timer = setInterval(() => {
             setTimeLeft(calculateTimeLeft());
         }, 1000);
- 
+
         return () => clearInterval(timer);
     }, []);
     return (
         <div className='flex gap-5 md:text-base text-sm'>
             <div className='text-center'>
-                <div className='bg-[#E91E31] w-fit px-3 py-1 text-white rounded-md font-bold'>
+                <div className='  w-fit px-3 py-1   rounded-md font-bold' style={{ backgroundColor: bgColor, color: textColor }}>
                     {String(timeLeft.days).padStart(2, '0')}
                 </div>
-                <p className='text-[#E91E31] font-bold'>DAYS</p>
+                <p className='  font-bold' style={{ color: texColor }} >DAYS</p>
             </div>
             <div className='text-center'>
-                <div className='bg-[#E91E31] w-fit px-3 py-1 text-white rounded-md font-bold'>
+                <div className=' w-fit px-3 py-1  rounded-md font-bold' style={{ backgroundColor: bgColor, color: textColor }} >
                     {String(timeLeft.hours).padStart(2, '0')}
                 </div>
-                <p className='text-[#E91E31] font-bold'>HRS</p>
+                <p className=' font-bold' style={{ color: texColor }}>HRS</p>
             </div>
             <div className='text-center'>
-                <div className='bg-[#E91E31] w-fit px-3 py-1 text-white rounded-md font-bold'>
+                <div className=' w-fit px-3 py-1  rounded-md font-bold' style={{ backgroundColor: bgColor, color: textColor }}>
                     {String(timeLeft.minutes).padStart(2, '0')}
                 </div>
-                <p className='text-[#E91E31] font-bold'>MINS</p>
+                <p className=' font-bold' style={{ color: texColor }}>MINS</p>
             </div>
             <div className='text-center'>
-                <div className='bg-[#E91E31] w-[40px] px-3 py-1 text-white rounded-md font-bold text-center'>
+                <div className=' w-[40px] px-3 py-1  rounded-md font-bold text-center' style={{ backgroundColor: bgColor, color: textColor }}>
                     {String(timeLeft.seconds).padStart(2, '0')}
                 </div>
-                <p className='text-[#E91E31] font-bold'>SECS</p>
+                <p className=' font-bold' style={{ color: texColor }}>SECS</p>
             </div>
         </div>
     );

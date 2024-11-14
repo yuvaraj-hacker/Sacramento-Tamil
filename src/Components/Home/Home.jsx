@@ -6,15 +6,17 @@ import Gallery from '../../Shared/Components/Home/Gallery'
 import Event from '../../Shared/Components/Home/Event'
 
 function Home() {
+  const prevRef = useRef(null);
+  const nextRef = useRef(null);
   const mobilePreviousRef = useRef(null);
   const mobileNextstepRef = useRef(null);
   const mobilePrevRef = useRef(null);
   const mobileNextRef = useRef(null);
   const [activeStatus, setActiveStatus] = useState('$10');
-  const statuses = ['$10', '$25', '$50', '$250', 'Custom Amount'];
+  const statuses = ['$10', '$25', '$50', '$100', '$250', 'Custom Amount'];
   return (
     <>
-      <HomePage />
+      <HomePage prevRef={prevRef} nextRef={nextRef} />
       <AboutSection />
       <Gallery mobilePreviousRef={mobilePreviousRef} mobileNextstepRef={mobileNextstepRef} />
       <Event mobilePrevRef={mobilePrevRef} mobileNextRef={mobileNextRef} />

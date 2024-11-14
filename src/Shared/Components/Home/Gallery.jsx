@@ -1,6 +1,5 @@
 import React, { useRef } from 'react'
 import { GallerySec } from '../../../../public/assets/Json/Gallery'
-
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -9,9 +8,8 @@ import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 
 
 function Gallery(props) {
-
-
   const { mobileNextStepRef, mobilePreviousRef } = props;
+
 
   return (
     <>
@@ -31,11 +29,9 @@ function Gallery(props) {
                 breakpoints={{
                   0: {
                     slidesPerView: 1,
-
                   },
                   768: {
                     slidesPerView: 2,
-
                   },
                   1024: {
                     slidesPerView: 3,
@@ -58,7 +54,6 @@ function Gallery(props) {
                   </SwiperSlide>
                 ))}
               </Swiper>
-
               <div
                 ref={mobileNextStepRef}
                 className="absolute  right-0   top-1/2  rotate-90  cursor-pointer"  >
@@ -75,6 +70,7 @@ function Gallery(props) {
           </div>
         </div>
       </section>
+     
     </>
   )
 }

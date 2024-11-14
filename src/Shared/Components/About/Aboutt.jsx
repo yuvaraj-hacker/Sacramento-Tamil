@@ -49,15 +49,15 @@ function Aboutt() {
             </section>
 
             <section className='max-w-[95rem] mx-auto px-5 my-20'>
-                <div className='flex  flex-wrap justify-center  place-items-center text-center   gap-10 '>
+                <div className='flex flex-wrap justify-center items-center  gap-10  '>
                     {allMember.map((item, index) => (
-                        <div key={index} className="  ">
-                            <img
+                        <div key={index} className="h-96  w-56 text-center">
+                            <img className=' '
                                 src={item.imgSrc}
                             />
-                            <div className='border  mx-2   rounded-bl-lg  rounded-br-lg bg-[#0571BC]'>
-                                <p className="  text-sm text-[#FFD900]"> {item.name}</p>
-                                <p className=" text-white"> {item.role}</p>
+                            <div className='border flex flex-col justify-center items-center mx-2  h-24  rounded-bl-lg  rounded-br-lg bg-[#0571BC]'>
+                                <p className="  text-base text-[#FFD900]"> {item.name}</p>
+                                <p className=" text-white  text-xs"> {item.role}</p>
                             </div>
                         </div>
                     ))}

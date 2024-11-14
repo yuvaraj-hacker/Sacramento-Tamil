@@ -1,5 +1,6 @@
 import React from 'react'
 import { Member } from '../../../../public/assets/Json/BoardMember'
+import { Link } from 'react-router-dom'
 
 function AboutSection() {
     return (
@@ -57,9 +58,7 @@ function AboutSection() {
                         <div className='flex justify-evenly flex-wrap gap-6 text-center'>
                             {Member.map((item, index) => (
                                 <div key={index} className="  ">
-                                    <img
-                                        src={item.imgSrc}
-                                    />
+                                    <img src={item.imgSrc} />
                                     <div className='border   mx-3 md:text-base text-sm  rounded-bl-lg rounded-br-lg bg-[#FFE134]'>
                                         <p className="text-[#E91E31] text-sm"> {item.name}</p>
                                         <p className=""> {item.role}</p>
@@ -67,8 +66,12 @@ function AboutSection() {
                                 </div>
                             ))}
                         </div>
-                        <div className=' concert-one-regular cursor-pointer  text-[#E91E31] rounded-lg px-3 bg-white p-2 w-fit mx-auto'>
-                            VIEW ALL
+                        <div>
+                            <Link to='/about'>
+                                <div className=' concert-one-regular cursor-pointer  text-[#E91E31] rounded-lg px-3 hover:bg-[#E91E31] hover:text-white duration-200 bg-white p-2 w-fit mx-auto'>
+                                    VIEW ALL
+                                </div>
+                            </Link>
                         </div>
                     </div>
                 </div>

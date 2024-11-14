@@ -9,11 +9,9 @@ import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import { EventProgram } from '../../../../public/assets/Json/Event'
 import CountdownTimer from './CountdownTimer';
 
-function HomePage({ }) {
-    const prevRef = useRef(null);
-    const nextRef = useRef(null);
-    const mobilePrevRef = useRef(null);
-    const mobileNextRef = useRef(null);
+function HomePage(props) {
+
+    const { prevRef, nextRef, mobileNextRef } = props;
     return (
         <>
             <section className="bg-[url('/assets/images/Header/Hero-sec.png')] bg-cover bg-no-repeat lg:my-0 my-10  flex items-center justify-center    lg:h-[100vh]   w-full">
@@ -23,16 +21,12 @@ function HomePage({ }) {
                             <div>
                                 {EventProgram.map((item, index) => (
                                     <div key={index} className="flex flex-wrap md:flex-nowrap  justify-center items-center gap-5">
-                                        <img className='w-96'
-                                            src={item.imgSrc}
-                                        />
+                                        <img className='w-96' src={item.imgSrc} />
                                         <div className='md:space-y-5 space-y-3'>
                                             <p className=" concert-one-regular md:text-2xl text-base text-white w-fit px-3 rounded-md bg-[#0470BC]">UPCOMING EVENT</p>
                                             <p className="md:text-2xl text-lg text-[#E91E31] font-semibold">சாக்ரமெண்டோ தமிழ் மன்றம்</p>
                                             <p className="text-[#0470BC] font-semibold text-xl">நடத்தும்</p>
-                                            <p className="  font-bold  text-[#0470BC] lg:text-5xl md:text-3xl text-xl text-outline-yellow">முதலாம் ஆண்டு  </p>
-                                            <p className="  font-bold  text-[#0470BC] lg:text-5xl md:text-3xl text-xl text-outline-yellow"> விளையாட்டு போட்டி</p>
-
+                                            <p className="  font-bold  text-[#0470BC] lg:text-5xl md:text-3xl text-xl text-outline-yellow">முதலாம் ஆண்டு  விளையாட்டு போட்டி  </p>
                                             <p className="font-bold text-[#FFD900] md:text-2xl  text-base  bg-[#0470BC] w-fit md:p-2 p-1 rounded-md">GAMES-CARROM, CHESS <span className='text-white'> &</span> TABLE TENNIS</p>
                                             <p className="concert-one-regular text-[#0470BC] text-xl">Registration Deadline: <span className='text-[#E91E31]'> 23-11-24</span></p>
                                             <p className="concert-one-regular text-[#0470BC] text-xl">Date Duration:  </p>
@@ -84,25 +78,18 @@ function HomePage({ }) {
                                 </Swiper>
                                 <div
                                     ref={prevRef}
-                                    className="absolute top-0 left-1/2 transform -translate-x-1/2 lg:block hidden   -translate-y-1/2 z-10 cursor-pointer"
+                                    className="absolute lg:top-0 lg:left-1/2 lg:transform lg:-translate-x-1/2      -left-10   lg:rotate-0   -rotate-90 top-1/2    lg:-translate-y-1/2 z-10 cursor-pointer"
                                 >
                                     <img className="swiper-button-prevdeal px-2" src="/assets/images/Hero-Section/Top.png" alt="Previous" />
                                 </div>
                                 <div
                                     ref={nextRef}
-                                    className="absolute  -bottom-4  left-1/2 transform  -translate-x-1/2 -translate-y-1/2 z-10  lg:block hidden     cursor-pointer"
-                                >
+                                    className="absolute  lg:-bottom-4   lg:left-1/2 lg:transform  lg:block hidden lg:-translate-x-1/2   lg:-translate-y-1/2  z-10     -rotate-90  lg:rotate-0  cursor-pointer" >
                                     <img className="swiper-button-nextdeal px-2" src="/assets/images/Hero-Section/Bottom.png" alt="Next" />
                                 </div>
                                 <div
-                                    ref={mobilePrevRef}
-                                    className="absolute lg:top-0 lg:left-1/2 lg:transform lg:-translate-x-1/2  -left-10  lg:hidden block  -rotate-90 top-1/2   lg:-translate-y-1/2 z-10 cursor-pointer"
-                                >
-                                    <img className="swiper-button-prevdeal px-2" src="/assets/images/Hero-Section/Top.png" alt="Previous" />
-                                </div>
-                                <div
                                     ref={mobileNextRef}
-                                    className="absolute  lg:bottom-0 lg:left-1/2 lg:transform  lg:-translate-x-1/2 lg:translate-y-1/2 z-10  lg:hidden block -rotate-90 lg:-right-0 top-1/2  -right-10     cursor-pointer"
+                                    className="absolute    z-10  lg:hidden block  -right-10 top-1/2 -rotate-90  cursor-pointer"
                                 >
                                     <img className="swiper-button-nextdeal px-2" src="/assets/images/Hero-Section/Bottom.png" alt="Next" />
                                 </div>
@@ -111,11 +98,6 @@ function HomePage({ }) {
                     </div>
                 </div>
             </section>
-
-
-
-
-
         </>
     )
 }

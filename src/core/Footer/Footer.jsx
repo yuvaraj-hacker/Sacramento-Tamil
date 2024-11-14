@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Footer() {
   return (
@@ -15,13 +16,41 @@ function Footer() {
                 <h1 className="text-[#FFE134] font-semibold mb-2 md:text-xl text-base">QUICK LINKS</h1>
               </div>
               <div className='space-y-2'>
-                <p>Board Members</p>
-                <p>Goals</p>
-                <p>By Laws</p>
-                <p>Financial Summary</p>
-                <p>Youth Forum</p>
-                <p>Gallery</p>
-                <p>Events</p>
+                <div>
+                  <Link to='/about'>
+                    <p className='hover:underline'>Board Members</p>
+                  </Link>
+                </div>
+                <div>
+                  <Link to='/goal'>
+                    <p className='hover:underline'>Goals</p>
+                  </Link>
+                </div>
+                <div>
+                  <Link to='/'>
+                    <p className='hover:underline'>By Laws</p>
+                  </Link>
+                </div>
+                <div>
+                  <Link to='/financial'>
+                    <p className='hover:underline'>Financial Summary</p>
+                  </Link>
+                </div>
+                <div>
+                  <Link to='/youth'>
+                    <p className='hover:underline'>Youth Forum</p>
+                  </Link>
+                </div>
+                <div>
+                  <Link to='/gallery'>
+                    <p className='hover:underline'>Gallery</p>
+                  </Link>
+                </div>
+                <div>
+                  <Link to='/events'>
+                    <p className='hover:underline'>Events</p>
+                  </Link>
+                </div>
               </div>
             </div>
 
@@ -49,7 +78,7 @@ function Footer() {
         </div>
       </section>
       <section className='w-full text-center bg-[#E52E3D] text-white py-3 px-5'>
-        <p className=" md:text-base text-sm">© Sacramento Tamil Mandrum 2024. Developed by  <a href='http://arrowthought.com/' target='_blank' > <span className='text-[#FFE134] hover:underline '> Arrow Thought</span> </a> </p>
+        <p className=" md:text-base text-sm flex justify-center flex-wrap items-center">© Sacramento Tamil Mandrum 2024 <hr className='w-5 rotate-90 md:block hidden'/>  Developed by  <a href='http://arrowthought.com/' target='_blank' > <span className='text-[#FFE134] hover:underline '> Arrow Thought</span> </a> </p>
       </section>
     </>
   );
