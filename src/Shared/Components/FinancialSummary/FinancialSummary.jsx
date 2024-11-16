@@ -1,13 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { FaChevronUp, FaChevronDown } from 'react-icons/fa';
-
 function FinancialSummary(props) {
-    const { toggleAccordion, accordionItems, openAccordions } = props;
-    const [isOpen, setIsOpen] = useState(false);
-
-    const openModal = () => {
-        setIsOpen(true);
-    };
+    const { toggleAccordion, accordionItems, openAccordions, setIsOpen, isOpen, openModal } = props;
 
     return (
         <>
