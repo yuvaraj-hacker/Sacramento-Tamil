@@ -7,7 +7,7 @@ function AboutSection() {
             <section className="bg-[url('/assets/images/Main/Main-section.png')]   space-y-20   md:py-20 md:pt-0  lg:pt-20 md:mb-0     w-full">
                 <div className='max-w-[60rem] px-5 mx-auto space-y-7 md:text-base text-sm'>
                     <div>
-                        <p className="md:text-4xl text-xl concert-one-regular text-center  text-[#E91E31]">WHAT WE DO</p>
+                        <p className=" text-2xl  concert-one-regular text-center  md:text-4xl text-[#E91E31]">WHAT WE DO</p>
                     </div>
                     <div className='grid md:grid-cols-2  grid-cols-2 gap-3 md:text-base text-sm'>
                         <div className='bg-[#E91E31] text-center p-2 md:px-10 text-white font-semibold rounded-tl-3xl rounded-bl-3xl '>
@@ -48,7 +48,7 @@ function AboutSection() {
                 </div>
                 <div className=' max-w-[60rem]   mx-auto px-5  '>
                     <div className='bg-[#0571BC] space-y-6 rounded-2xl p-5 '>
-                        <p className="text-[#FFE134] text-center md:text-4xl text-xl concert-one-regular" >BOARD MEMBERS</p>
+                        <p className="text-[#FFE134] text-center md:text-4xl text-2xl concert-one-regular" >BOARD MEMBERS</p>
                         <div className='flex justify-evenly flex-wrap gap-6 text-center'>
                             {Member.map((item, index) => (
                                 <div key={index} className="  ">

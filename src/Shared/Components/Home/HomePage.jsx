@@ -12,8 +12,8 @@ function HomePage(props) {
     return (
         <>
             <section className="bg-[url('/assets/images/Header/Hero-sec.png')] bg-cover bg-no-repeat lg:my-0 my-10  flex items-center justify-center    lg:h-[100vh]   w-full">
-                <div className='mx-auto max-w-[100rem] px-5 lg:my-0 my-10 ' >
-                    <div className='grid lg:grid-cols-4 grid-cols-1   gap-10 items-center'>
+                <div className='mx-auto max-w-[100rem] lg:my-0 my-10 ' >
+                    <div className='grid lg:grid-cols-4 grid-cols-1  px-5  gap-10 items-center'>
                         <div className=' space-y-6 lg:col-span-3  '>
                             <div>
                                 {EventProgram.map((item, index) => (

@@ -45,7 +45,7 @@ function Aboutt() {
                             <img className=' '
                                 src={item.imgSrc}
                             />
-                            <div className='border flex flex-col justify-center items-center mx-2  h-24  rounded-bl-lg  rounded-br-lg bg-[#0571BC]'>
+                            <div className='  flex flex-col justify-center items-center mx-2  h-24  rounded-bl-lg  rounded-br-lg bg-[#0571BC]'>
                                 <p className="  text-base text-[#FFD900]"> {item.name}</p>
                                 <p className=" text-white  text-xs"> {item.role}</p>
                             </div>

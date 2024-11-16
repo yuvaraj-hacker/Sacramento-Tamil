@@ -12,7 +12,7 @@ function Gallery(props) {
       <section className=' max-w-[90rem] mx-auto   md:my-20  my-10'>
         <div>
           <div className='md:space-y-10 space-y-5'>
-            <h2 className="text-2xl font-bold text-center text-[#504C00]    archivo-black-regular">GALLERY</h2>
+            <h2 className="text-2xl font-bold text-center text-[#504C00] md:text-4xl    concert-one-regular">GALLERY</h2>
             <section className="flex flex-col items-center relative   px-14 ">
               <Swiper
                 slidesPerView={1}

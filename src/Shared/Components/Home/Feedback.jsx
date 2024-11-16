@@ -3,10 +3,10 @@ function Feedback(props) {
     const { statuses, setActiveStatus, activeStatus } = props;
     return (
         <>
-            <section className="bg-[url('/assets/images/Feedback/Feedback.png')] bg-center  mt-10     bg-contain">
-                <div className='max-w-[60rem] px-5 mx-auto py-10 pb-52 '>
+            <section className="bg-[url('/assets/images/Feedback/Feedback.png')] bg-center        bg-contain">
+                <div className='max-w-[60rem] px-5 mx-auto py-10 pb-52 space-y-4 '>
                     <div>
-                        <p className="text-center text-[#E91E31] md:text-3xl text-base concert-one-regular font-bold">FEEDBACK</p>
+                        <p className="text-center text-[#E91E31] md:text-4xl text-2xl   concert-one-regular font-bold">FEEDBACK</p>
                     </div>
                     <div className='space-y-5'>
                         <div className='grid md:grid-cols-3 gap-4'>

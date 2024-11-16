@@ -1,4 +1,4 @@
-import React   from 'react'
+import React from 'react'
 import { Events } from '../../../../public/assets/Json/NewEvent'
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -9,19 +9,16 @@ function Event(props) {
     const { mobileNextRef, mobilePrevRef } = props;
     return (
         <>
-            <section className=' max-w-[90rem] mx-auto   my-10 md:my-20 '>
+            <section className=' max-w-[90rem] mx-auto  my-10 md:my-20 '>
                 <div>
                     <div className='md:space-y-10 space-y-5'>
-                        <h2 className="text-2xl font-bold text-center text-[#8F000D]    archivo-black-regular">EVENTS</h2>
+                        <h2 className="text-2xl font-bold text-center text-[#8F000D] md:text-4xl   concert-one-regular">EVENTS</h2>
                         <section className="flex flex-col items-center relative  px-14 ">
                             <Swiper
                                 slidesPerView={1}
                                 spaceBetween={30}
                                 loop={true}
-                                autoplay={{
-                                    delay: 3000,
-                                    disableOnInteraction: false,
-                                }}
+                                autoplay={{ delay: 3000, disableOnInteraction: false, }}
                                 breakpoints={{
                                     0: {
                                         slidesPerView: 1,
